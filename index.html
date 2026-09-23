@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Tomo dos Ventos — Ficção Interativa</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --border: #334155;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #090d16 0%, #0f172a 50%, #1e1b4b 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 9999px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #ffffff, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.subtitle {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 650px;
+      margin: 0 auto 3rem auto;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      text-align: left;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 30px -10px rgba(56, 189, 248, 0.2);
+    }
+    .card-lang {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: #fff;
+    }
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 1.75rem;
+      flex-grow: 1;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.5rem;
+      background: var(--accent);
+      color: #0f172a;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+    .btn:hover {
+      background: var(--accent-hover);
+      transform: scale(1.02);
+    }
+    footer {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Twine Interactive Fiction</div>
+    <h1>O Tomo dos Ventos</h1>
+    <p class="subtitle">
+      Uma narrativa ramificada de fantasia e mistério na cidade de Aeolium. Suas escolhas moldam o equilíbrio dos ventos e o destino da cidade.
+    </p>
+
+    <div class="grid">
+      <!-- Versão em Português -->
+      <div class="card">
+        <div>
+          <div class="card-lang">Português • Versão Completa</div>
+          <h2>O Tomo dos Ventos</h2>
+          <p>
+            A praça central de Aeolium recebe-o com correntes de ar caóticas. O sábio Zéfiro avisa que o equilíbrio natural foi quebrado e apenas os fragmentos perdidos do lendário Tomo podem salvar o reino.
+          </p>
+        </div>
+        <a class="btn" href="historias/o-tomo-dos-ventos.html">▶ Jogar em Português</a>
+      </div>
+
+      <!-- Versão em Inglês -->
+      <div class="card">
+        <div>
+          <div class="card-lang">English • Full Story</div>
+          <h2>Tome of The Winds</h2>
+          <p>
+            The central square of Aeolium welcomes you with chaotic gusts. Zéphyros warns of impending doom across the skies unless the ancient scattered fragments of the Tome are recovered.
+          </p>
+        </div>
+        <a class="btn" href="stories/tome-of-the-winds.html">▶ Play in English</a>
+      </div>
+    </div>
+
+    <footer>
+      Criado com <a href="https://twinery.org/" target="_blank">Twine 2</a> & Harlowe • Desenvolvido por <a href="https://github.com/reneecruzpt" target="_blank">Reneê Cruz</a>
+    </footer>
+  </div>
+</body>
+</html>
